@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'wsdirector'
+
+begin
+  exit_code = Wsdirector::Cli.start
+rescue => e
+  puts 'Bummer! There is an error:'
+  puts e
+  exit 1
+end
+
+exit exit_code
